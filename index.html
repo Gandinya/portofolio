@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZARG BEE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* DEFINISI FONT BARU */
+        /* Body Font: Montserrat - Modern, bersih, dan tebal/bold terlihat bagus */
+        .font-body { font-family: 'Montserrat', sans-serif; }
+        /* Heading Font: Impact (atau fallback yang kuat) untuk efek bold yang diminta */
+        /* Catatan: Impact tidak diimpor dari Google Fonts, ia adalah font sistem */
+        .font-heading { font-family: 'Impact', 'Arial Black', Gadget, sans-serif; } 
+        
+        /* Pastikan konten utama tersembunyi selama preloader aktif */
+        body.loading > :not(#preloader) {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        body:not(.loading) > :not(#preloader) {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 transition-colors duration-500 loading">
+
+    <div id="preloader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-gray-900 transition-opacity duration-1000">
+        <div class="w-full h-full max-w-lg max-h-lg flex items-center justify-center">
+            <video id="logo-video" autoplay muted playsinline class="rounded-lg w-[1080px] shadow-2xl">
+                <source src="ZARG BEE LOGO.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            </div>
+    </div>
+    <header id="main-header" class="sticky top-0 z-50 w-full backdrop-blur-lg bg-white/90 dark:bg-gray-900/90 shadow-lg transition-colors duration-500">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+            <div class="text-2xl font-bold font-heading text-indigo-600 dark:text-indigo-400">ZARG BEE</div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+                <a href="#portfolio" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Portofolio</a>
+                <a href="#services" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Layanan</a>
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Tentang</a>
+                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Kontak</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300 text-xl" aria-label="Toggle Dark Mode">🌙</button>
+                <a href="#contact" class="hidden md:inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md">Jadwalkan Diskusi</a>
+                <button class="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300 text-xl">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-[85vh] flex flex-col justify-center items-center text-center py-20 px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 
+                    class="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight"
+                    data-aos="fade-up" 
+                    data-aos-duration="1000">
+                    CINTA ITU TIDAK BISA DITEBAK HANYA DALAM 1 HARI
+                </h1>
+                <p 
+                    class="text-xl md:text-2xl text-gray-500 dark:text-gray-400 mb-10"
+                    data-aos="fade-up" 
+                    data-aos-delay="300" 
+                    data-aos-duration="1000">
+                    PORTOFOLIO GANDUL EVERYONE
+                </p>
+                <div class="flex justify-center space-x-4" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#portfolio" class="bg-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-xl">Lihat Portofolio Lengkap &rarr;</a>
+                    <a href="#about" class="text-indigo-600 dark:text-indigo-400 px-8 py-3 rounded-full text-lg font-semibold border border-indigo-600 dark:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-gray-800 transition duration-300">Filosofi Saya</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="py-16 px-4 bg-gray-50 dark:bg-gray-800 transition-colors duration-500">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="stat" data-aos="zoom-in" data-aos-delay="100">
+                        <h2 class="text-5xl font-bold font-heading text-indigo-600">3+</h2>
+                        <p class="text-gray-500 dark:text-gray-400 mt-2">Bulan Pengalaman</p>
+                    </div>
+                    <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+                        <h2 class="text-5xl font-bold font-heading text-indigo-600">50+</h2>
+                        <p class="text-gray-500 dark:text-gray-400 mt-2">Proyek Sukses</p>
+                    </div>
+                    <div class="stat" data-aos="zoom-in" data-aos-delay="300">
+                        <h2 class="text-5xl font-bold font-heading text-indigo-600">98%</h2>
+                        <p class="text-gray-500 dark:text-gray-400 mt-2">Kepuasan Klien</p>
+                    </div>
+                    <div class="stat" data-aos="zoom-in" data-aos-delay="400">
+                        <h2 class="text-5xl font-bold font-heading text-indigo-600">5</h2>
+                        <p class="text-gray-500 dark:text-gray-400 mt-2">Penghargaan Website</p>
+                    </div>
+                </div>
+                <div class="mt-16 border-t border-gray-200 dark:border-gray-700 pt-8">
+                    <p class="text-center text-gray-500 dark:text-gray-400 mb-6" data-aos="fade-up">Dipercaya oleh Merek Ternama:</p>
+                    <div class="flex flex-wrap justify-center items-center gap-8 opacity-70" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-8 w-20 bg-gray-300 dark:bg-gray-600"></div> 
+                        <div class="h-8 w-20 bg-gray-300 dark:bg-gray-600"></div>
+                        <div class="h-8 w-20 bg-gray-300 dark:bg-gray-600"></div>
+                        <div class="h-8 w-20 bg-gray-300 dark:bg-gray-600"></div>
+                        <div class="h-8 w-20 bg-gray-300 dark:bg-gray-600"></div>
+                        <div class="h-8 w-20 bg-gray-300 dark:bg-gray-600"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-20 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl font-bold font-heading text-center mb-12" data-aos="fade-down">Projek Mamang Gandul</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="relative group overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition duration-500" data-aos="fade-right" data-aos-offset="150">
+                        <img src="poster.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">Nama Proyek A</h3>
+                            <p class="text-indigo-300">UX/UI Design</p>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition duration-500" data-aos="fade-up" data-aos-delay="200">
+                        <img src="gandul.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">Nama Proyek B</h3>
+                            <p class="text-indigo-300">Branding & Logo</p>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition duration-500" data-aos="fade-left" data-aos-offset="150">
+                        <img src="GAN.png" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                            <h3 class="text-white text-xl font-bold">Nama Proyek C</h3>
+                            <p class="text-indigo-300">Web Development</p>
+                        </div>
+                    </div>
+                    </div>
+                <div class="text-center mt-12">
+                    <a href="portfolio.html" class="bg-indigo-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow-lg" data-aos="zoom-in" data-aos-delay="400">Jelajahi Semua Karya Saya &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="final-cta" class="py-24 px-4 bg-indigo-600 dark:bg-indigo-700 text-white text-center transition-colors duration-500">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4" data-aos="flip-up">SIAP UNTUK MENGUBAH IDE MENJADI REALITAS DIGITAL?</h2>
+            <p class="text-xl mb-10 opacity-90" data-aos="fade-up" data-aos-delay="200">Mari berdiskusi bagaimana keahlian saya dapat membantu proyek Anda mencapai potensi maksimal.</p>
+            <a href="#contact" class="bg-white text-indigo-600 px-12 py-4 rounded-full text-xl font-bold hover:bg-gray-100 transition duration-300 shadow-xl" data-aos="zoom-in" data-aos-delay="400">Jadwalkan Konsultasi Gratis</a>
+        </section>
+        
+    </main>
+
+    <footer id="main-footer" class="bg-gray-900 dark:bg-black text-gray-400 py-16 px-4 border-t-4 border-indigo-600 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+                
+                <div class="col-span-2 md:col-span-1" data-aos="fade-up">
+                    <div class="text-3xl font-bold font-heading text-indigo-500 mb-4">Nama Anda</div>
+                    <p class="italic mb-4">"Crafting Digital Legacies. Where Design Meets Impact."</p>
+                    <p class="text-xs">&copy; <span id="current-year"></span> Nama Anda. Hak Cipta Dilindungi.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-white font-semibold mb-4 uppercase tracking-wider">EKSPLORASI</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#portfolio" class="hover:text-indigo-400 transition">Portofolio (Semua)</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Desain UX/UI</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Branding</a></li>
+                        <li><a href="#about" class="hover:text-indigo-400 transition">Tentang Saya</a></li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-white font-semibold mb-4 uppercase tracking-wider">TERHUBUNG</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-2xl hover:text-indigo-400 transition" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-2xl hover:text-indigo-400 transition" aria-label="Dribbble"><i class="fas fa-basketball-ball"></i></a>
+                        <a href="#" class="text-2xl hover:text-indigo-400 transition" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    </div>
+                    <p><a href="mailto:hello@emailanda.com" class="hover:text-indigo-400 transition">hello@emailanda.com</a></p>
+                    <p class="text-sm mt-2 opacity-80">Ingin berkolaborasi? Mari ngopi virtual.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-white font-semibold mb-4 uppercase tracking-wider">INSIGHTS EKSKLUSIF</h4>
+                    <p class="mb-4 text-sm">Dapatkan update tren desain terbaru dan studi kasus.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Email Anda" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:ring-indigo-500 focus:border-indigo-500">
+                        <button type="submit" class="w-full bg-indigo-600 text-white p-3 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">SUBSCRIBE</button>
+                    </form>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 pt-6 border-t border-gray-700 flex justify-between items-center text-xs">
+                <p>Made with ❤️ by Nama Anda. | <a href="#" class="hover:text-indigo-400">Kebijakan Privasi</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="back-to-top" class="fixed bottom-6 right-6 p-3 bg-indigo-600 text-white rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-indigo-700 z-50" aria-label="Kembali ke atas">↑</button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // INISIALISASI AOS
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            const preloader = document.getElementById('preloader');
+            const logoVideo = document.getElementById('logo-video');
+            const DURATION_MS = 5000; // Durasi 5 detik (5000ms)
+
+            // ========================= LOGIKA PRELOADER =========================
+            function hidePreloader() {
+                // Sembunyikan preloader dengan transisi fade-out
+                preloader.style.opacity = '0';
+                
+                // Hapus kelas 'loading' dari body agar konten utama terlihat
+                body.classList.remove('loading');
+                
+                // Hapus elemen preloader dari DOM setelah transisi selesai
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 1000); // 1000ms adalah durasi transisi CSS (transition-opacity duration-1000)
+            }
+
+            // Opsi 1: Berdasarkan durasi video (Disarankan)
+            if (logoVideo) {
+                // Pastikan video diputar
+                logoVideo.play().catch(error => {
+                    console.error("Gagal memutar video. Mematikan preloader setelah 5 detik.", error);
+                    // Jika gagal putar (misal: browser memblokir), gunakan timeout
+                    setTimeout(hidePreloader, DURATION_MS);
+                });
+
+                // Setelah video selesai, sembunyikan preloader
+                logoVideo.onended = hidePreloader;
+
+                // Fallback Timer (Jika video lebih pendek atau ada masalah onended)
+                // Pastikan preloader hilang maksimal 5 detik
+                  setTimeout(hidePreloader, DURATION_MS);
+
+            } else {
+                // Opsi 2: Hanya menggunakan timer 5 detik jika tag video tidak ada
+                setTimeout(hidePreloader, DURATION_MS);
+            }
+            
+            // ========================= LOGIKA DARK MODE & FOOTER =========================
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            const themeToggle = document.getElementById('theme-toggle');
+            
+            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                body.classList.add('dark');
+                themeToggle.textContent = '☀️';
+            } else {
+                body.classList.remove('dark');
+                themeToggle.textContent = '🌙';
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                    themeToggle.textContent = '☀️';
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    themeToggle.textContent = '🌙';
+                }
+            });
+
+            // 3. Back to Top Button Logic
+            const backToTopButton = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 400) {
+                    backToTopButton.classList.remove('opacity-0');
+                    backToTopButton.classList.add('opacity-100');
+                } else {
+                    backToTopButton.classList.remove('opacity-100');
+                    backToTopButton.classList.add('opacity-0');
+                }
+            });
+
+            // 4. Back to Top Smooth Scroll
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
