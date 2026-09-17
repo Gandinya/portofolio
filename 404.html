@@ -1,40 +1,49 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0b0b">
+  <meta name="theme-color" content="#f3f1e8">
   <meta name="robots" content="noindex">
+  <meta name="description" content="Page not found — return to Muhmd Gandi's graphic design portfolio.">
   <title>404 — Muhmd Gandi</title>
   <style>
-    :root{--bg:#f4f3ef;--ink:#0b0b0b;--muted:#77756e;--accent:#ff5c35}
+    :root{--paper:#f3f1e8;--ink:#11120f;--muted:#74736d;--acid:#c7ff28;--orange:#ff5b35;--line:rgba(17,18,15,.2);--pad:clamp(20px,4vw,64px)}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{min-height:100svh;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif;display:grid;grid-template-rows:auto 1fr auto;padding:clamp(20px,4vw,64px)}
-    header,footer{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.1em}
-    .brand{font-weight:800;font-size:16px;letter-spacing:-.03em;text-transform:none}
-    main{display:grid;align-content:center;padding:60px 0}
-    .code{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:18px}
-    h1{font-size:clamp(64px,15vw,220px);line-height:.78;letter-spacing:-.075em;max-width:1400px}
-    h1 span{color:var(--accent)}
-    .bottom{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:46px}
-    p{max-width:440px;color:var(--muted);font-size:15px;line-height:1.65}
-    a.cta{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--ink);border-radius:999px;padding:13px 18px;font-weight:700;color:inherit;text-decoration:none;transition:.25s}
-    a.cta:hover,a.cta:focus-visible{background:var(--ink);color:var(--bg);outline:none}
-    a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
-    @media(max-width:650px){.bottom{align-items:start;flex-direction:column}footer span:last-child{display:none}}
-    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+    html{background:var(--paper)}
+    body{min-height:100svh;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif;display:grid;grid-template-rows:auto 1fr auto;padding:0 var(--pad);overflow:hidden;position:relative}
+    body:after{content:"";position:fixed;width:min(52vw,720px);aspect-ratio:1;border:1px solid var(--line);border-radius:50%;right:-10vw;top:15vh;pointer-events:none;animation:orbit 22s linear infinite}
+    body:before{content:"";position:fixed;width:12px;height:12px;background:var(--acid);border:1px solid var(--ink);border-radius:50%;right:11vw;top:24vh;z-index:1;pointer-events:none}
+    header,footer{min-height:78px;display:flex;justify-content:space-between;gap:20px;align-items:center;border-bottom:1px solid var(--line);font-size:11px;text-transform:uppercase;letter-spacing:.1em;position:relative;z-index:2}
+    footer{border-bottom:0;border-top:1px solid var(--line)}
+    .brand{font-weight:800;font-size:18px;letter-spacing:-.05em;text-transform:none;color:inherit;text-decoration:none}
+    .brand i{display:inline-block;width:8px;height:8px;background:var(--orange);border-radius:50%;margin-left:4px}
+    main{display:grid;align-content:center;padding:clamp(55px,9vh,110px) 0;position:relative;z-index:2}
+    .code{font:12px monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:22px}
+    h1{font-size:clamp(72px,16vw,230px);line-height:.75;letter-spacing:-.085em;text-transform:uppercase;max-width:1400px}
+    h1 span{-webkit-text-stroke:2px var(--ink);color:transparent;margin-left:10vw}
+    .tag{position:absolute;right:8vw;top:27%;background:var(--acid);padding:11px 14px;font:12px monospace;text-transform:uppercase;transform:rotate(5deg)}
+    .bottom{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:clamp(38px,6vh,70px)}
+    p{max-width:470px;color:var(--muted);font-size:15px;line-height:1.65}
+    a.cta{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--ink);border-radius:999px;padding:13px 18px;font-weight:700;color:inherit;text-decoration:none;transition:background .25s,color .25s,transform .25s}
+    a.cta:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+    a:focus-visible{outline:3px solid var(--orange);outline-offset:5px}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    @media(max-width:650px){header,footer{min-height:64px}.bottom{align-items:start;flex-direction:column}.tag{right:0;top:23%;font-size:10px}h1 span{margin-left:4vw}footer span:last-child{display:none}body:after{width:90vw;right:-45vw;top:25vh}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
-  <header><a class="brand" href="./">MUHMD GANDI®</a><span>Graphic Designer</span></header>
+  <header><a class="brand" href="./" aria-label="Muhmd Gandi portfolio home">MUHMD GANDI<i aria-hidden="true"></i></a><span>Graphic Designer / 2026</span></header>
   <main>
     <div class="code">404 / Page not found</div>
-    <h1>LOST<br><span>PAGE.</span></h1>
+    <h1>Wrong<span>Turn.</span></h1>
+    <span class="tag" aria-hidden="true">Find. Return. Explore. ✦</span>
     <div class="bottom">
-      <p>Halaman yang kamu cari tidak tersedia atau sudah berpindah. Kembali ke portfolio utama untuk melihat selected work, services, dan cara kerja Muhmd Gandi.</p>
-      <a class="cta" href="./" aria-label="Kembali ke halaman utama portfolio Muhmd Gandi">Back to portfolio ↗</a>
+      <p>This page may have moved or no longer exists. Head back to the portfolio to explore selected graphic work, digital experiences, and creative services.</p>
+      <a class="cta" href="./">Back to portfolio ↗</a>
     </div>
   </main>
-  <footer><span>© 2026 Muhmd Gandi</span><span>Design with intention.</span></footer>
+  <footer><span>© 2026 Muhmd Gandi</span><span>Based in Indonesia · Working worldwide</span></footer>
 </body>
 </html>
