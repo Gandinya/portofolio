@@ -25,7 +25,7 @@ const loader=document.getElementById('loader');const hideLoader=()=>loader?.clas
         clone.setAttribute('aria-hidden', 'true');
         track.appendChild(clone);
       }
-      track.style.setProperty('--ticker-shift', groupWidth + 'px');
+      track.style.setProperty('--ticker-offset', '-' + groupWidth + 'px');
       track.style.setProperty('--ticker-duration', groupWidth / 70 + 's');
     };
 
